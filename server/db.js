@@ -1,0 +1,18 @@
+const mysql = require('mysql2/promise');
+
+const pool = mysql.createPool({
+  host: 'localhost',
+  user: 'root',
+  password: '11july2011',
+  database: process.env.NODE_ENV === 'test' ? 'test_db' : 'todo_app',
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
+});
+
+// Add this function
+async function query(sql, params) {
+  return pool.query(sql, params);
+}
+
+module.exports = { pool, query };
