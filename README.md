@@ -37,4 +37,6 @@ A full-stack Todo application built with Node.js, Express, MySQL, and vanilla Ja
 - Node.js (v14 or higher)
 - MySQL Server
 - Git
+![Screenshot 2025-06-23 131034](https://github.com/user-attachments/assets/7f05b956-17c8-41dd-9797-d48255b6eb66)
+
 
