@@ -10,7 +10,6 @@ const pool = mysql.createPool({
   queueLimit: 0
 });
 
-// Add this function
 async function query(sql, params) {
   return pool.query(sql, params);
 }

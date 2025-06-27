@@ -1,15 +1,26 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "cross-env NODE_ENV=test npx jest --passWithNoTests",
-    "test:unit": "cross-env NODE_ENV=test npx jest tests/unit",
-    "test:integration": "cross-env NODE_ENV=test npx jest tests/integration",
-    "test:api": "cross-env NODE_ENV=test npx jest tests/api",
-    "test:coverage": "cross-env NODE_ENV=test npx nyc --reporter=text jest",
-    "start": "node app.js"
-  },
+  "main": "index.js","scripts": {
+  "test": "cross-env NODE_ENV=test jest --coverage --passWithNoTests",
+  "test:unit": "cross-env NODE_ENV=test jest tests/unit --coverage",
+  "test:integration": "cross-env NODE_ENV=test jest tests/integration --coverage", 
+  "test:api": "cross-env NODE_ENV=test jest tests/api --coverage",
+  "test:coverage": "cross-env NODE_ENV=test jest --coverage --verbose",
+  "start": "node app.js"
+},
+"scripts": {
+  "test": "cross-env NODE_ENV=test jest --coverage --passWithNoTests",
+  "test:unit": "cross-env NODE_ENV=test jest tests/unit --coverage",
+  "test:integration": "cross-env NODE_ENV=test jest tests/integration --coverage",
+  "test:api": "cross-env NODE_ENV=test jest tests/api --coverage",
+  "test:coverage": "cross-env NODE_ENV=test jest --coverage --verbose",
+  "start": "node app.js"
+}
+
+
+
+,
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -21,6 +32,8 @@
     "mysql2": "^3.14.1"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.27.2",
+    "babel-jest": "^30.0.2",
     "cross-env": "^7.0.3",
     "jest": "^30.0.2",
     "nyc": "^17.1.0",

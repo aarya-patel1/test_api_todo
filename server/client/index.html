@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>The To-Do List</h1>
+            <div id="current-time"></div>
+        </header>
+        
+        <div class="columns-container">
+            <!-- Left Column - Add Task Form -->
+            <div class="form-column">
+                <form id="task-form">
+                    <h2>Add New Task</h2>
+                    <input type="text" id="task-title" placeholder="Task title" required>
+                    <textarea id="task-description" placeholder="Description (optional)"></textarea>
+                    <button type="submit">Add Task</button>
+                </form>
+            </div>
+            
+            <!-- Right Column - Task List -->
+            <div class="list-column">
+                <h2>Your Tasks</h2>
+                <div id="task-list"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
